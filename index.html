@@ -30,14 +30,6 @@
 <body>
   <div class="glitch">system redirect...</div>
 
-  <script>
-    const visited = localStorage.getItem('boosty_visited');
-    if (visited) {
-      window.location.href = 'https://boosty.to/kaeli';
-    } else {
-      localStorage.setItem('boosty_visited', 'true');
-      window.location.href = 'https://boosty.to/kaeli/ref';
-    }
-  </script>
+  <script src="redirect.js" defer></script>
 </body>
 </html>
