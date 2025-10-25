@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #b3aaff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: monospace;
+      font-size: 1.2em;
+    }
+    .glitch {
+      animation: flicker 1.5s infinite;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glitch">system redirect...</div>
+
+  <script>
+    const visited = localStorage.getItem('boosty_visited');
+    if (visited) {
+      window.location.href = 'https://boosty.to/kaeli';
+    } else {
+      localStorage.setItem('boosty_visited', 'true');
+      window.location.href = 'https://boosty.to/kaeli/ref';
+    }
+  </script>
+</body>
+</html>
